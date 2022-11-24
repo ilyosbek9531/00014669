@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Online Books</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="logo" href="./index.html">
+            <img
+              class="logo__img"
+              src="./images/asaxiy-logo.svg"
+              alt="logo image"
+              width="134"
+              height="40"
+            />
+          </a>
+          <form class="site-header__form form-header">
+            <input
+              class="form-header__input"
+              type="text"
+              placeholder="search..."
+            />
+            <button class="form-header__btn" type="submit">Search</button>
+          </form>
+
+          <div class="site-header__btn-wrapper">
+            <button class="site-header__btn btn-basket" type="button">
+              Basket
+              <ul class="basket-list">
+                <p>No found book</p>
+              </ul>
+              <span class="basket-num">0</span>
+            </button>
+            <div class="btn-room">
+                <!-- sideBar -->
+              <div class="hamburger-menu__container">
+                <div class="hamburger-menu">
+                  <div class="hamburger-menu__line"></div>
+                  <div class="hamburger-menu__line"></div>
+                  <div class="hamburger-menu__line"></div>
+                </div>
+              </div>
+              <div class="sidebar">
+                <nav class="nav">
+                  <nav class="nav__item" onclick="openPage('./html/about.html')">
+                    <i data-feather="user" class="nav__item-icon"></i>
+                  </nav>
+                  <nav class="nav__item" onclick="openPage('./html/delivery.html')">
+                    <i data-feather="bookmark" class="nav__item-icon"></i>
+                  </nav>
+                  <nav class="nav__item">
+                    <i data-feather="bar-chart-2" class="nav__item-icon"></i>
+                  </nav>
+                  <nav class="nav__item">
+                    <i data-feather="arrow-down-circle" class="nav__item-icon"></i>
+                  </nav>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Header -->
+    <main class="site-main">
+      <!-- Books -->
+      <section class="books">
+        <div class="container">
+          <div class="books__inner">
+            <div class="books__lenguage">
+              <h2 class="books__lenguage-title">Languages</h2>
+              <ul class="books__lenguage-list">
+                <li class="books__lenguage-item selected">All (99)</li>
+              </ul>
+            </div>
+            <div class="books__card">
+              <div class="book-card__top-wrapper">
+                <h2 class="book__card-title">Books</h2>
+                <div class="book-filter">
+                  <span class="book-filter__text">Sorting</span>
+                  <button class="book-filter__btn" type="button"></button>
+                  <ul class="book-filter__list">
+                    <li class="book-filter__item" data-value="a-z">A-Z</li>
+                    <li class="book-filter__item" data-value="z-a">Z-A</li>
+                    <li class="book-filter__item" data-value="tohighpage">
+                      To High Page
+                    </li>
+                    <li class="book-filter__item" data-value="tolowpage">
+                      To Low Page
+                    </li>
+                    <li class="book-filter__item" data-value="tohighyear">
+                      To High Year
+                    </li>
+                    <li class="book-filter__item" data-value="tolowyear">
+                      To Low Year
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="pagination-list"></ul>
+              <ul class="books__card-list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Books -->
+    </main>
+
+    <!-- Template -->
+    <template class="site-template">
+      <li class="card-item">
+        <img
+          class="card-img"
+          src=""
+          alt="book image"
+          width="160"
+          height="160"
+        />
+        <h3 class="card-title"></h3>
+        <div class="card-wrapper">
+          <p class="card-year"></p>
+          <p class="card-page"></p>
+        </div>
+        <div class="card-bottom">
+          <a class="card-wikipedia" href="" target="_blank">Wikipedia</a>
+          <p class="card-leguage"></p>
+        </div>
+        <button class="card-basket"></button>
+      </li>
+    </template>
+
+
+    <!-- footer -->
+    <footer class="wrapper-footer">
+      <div class="footer-top">
+          <div class="footer-top__item">
+              <img src="https://asaxiy.uz/custom-assets/images/icons/market.svg" alt="photo">
+              <div class="item-title">
+                  <h2>Endi bozorga borishga hojat yo'q</h2>
+                  <p>Bizda qulay narxlar va uyga yetkazib berish mavjud</p>
+              </div>
+          </div>
+          <div class="footer-top__item">
+              <img src="https://asaxiy.uz/custom-assets/images/icons/market.svg" alt="photo">
+              <div class="item-title">
+                  <h2>Endi bozorga borishga hojat yo'q</h2>
+                  <p>Bizda qulay narxlar va uyga yetkazib berish mavjud</p>
+              </div>
+          </div>
+          <div class="footer-top__item">
+              <img src="https://asaxiy.uz/custom-assets/images/icons/market.svg" alt="photo">
+              <div class="item-title">
+                  <h2>Endi bozorga borishga hojat yo'q</h2>
+                  <p>Bizda qulay narxlar va uyga yetkazib berish mavjud</p>
+              </div>
+          </div>
+          <div class="footer-top__item">
+              <img src="https://asaxiy.uz/custom-assets/images/icons/market.svg" alt="photo">
+              <div class="item-title">
+                  <h2>Endi bozorga borishga hojat yo'q</h2>
+                  <p>Bizda qulay narxlar va uyga yetkazib berish mavjud</p>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom__main">
+              <div class="footer-bottom__links">
+                  <h5>Ma'lumotlar</h5>
+                  <h6>Ommaviy oferta (Foydalanuvchi bitimi)</h6>
+                  <h6>Muddatli toʻlov asosida sotib olishning umumiy qoidalari</h6>
+                  <h6>Muddatli toʻlov shartlari</h6>
+                  <h6>Tovarlarni yetkazib berish va toʻlov turlari</h6>
+                  <h6>Buyurtmani bekor qilish va tovarni qaytarish</h6>
+                  <h6>Biz haqimizda</h6>
+              </div>
+              <div class="footer-bottom__contact">
+                  <h5>Biz bilan aloqa</h5>
+                  <div class="contact-item">
+                      <i data-feather="phone" class="nav__item-icon"></i>
+                      <h4>+998905649531</h4>
+                  </div>
+                  <div class="contact-item">
+                      <i data-feather="mail" class="nav__item-icon"></i>
+                      <h4>sheraliyevilyosbek@gmail.com</h4>
+                  </div>
+                  <div class="contact-item">
+                      <i data-feather="map-pin" class="nav__item-icon"></i>
+                      <h4>chilonzor 3, Toshkent</h4>
+                  </div>
+              </div>
+              <div class="footer-bottom__facebook">
+                  <h5>Bizning Facebook</h5>
+                  <img src="../images/facebook.jpeg" alt="photo" class="facebook-img">
+              </div>
+          </div>
+          <div class="wrapper-cost__method">
+              <div class="cost-method">
+                  <h3>To'lov turlari :</h3>
+                  <img src="../icons/click.svg" alt="photo">
+                  <img src="../icons/payme.svg" alt="photo">
+                  <img src="../icons/visa.svg" alt="photo">
+                  <img src="../icons/masterCard.svg" alt="photo">
+                  <img src="../icons/humo.svg" alt="photo">
+                  <img src="../icons/uzcard.svg" alt="photo">
+              </div>
+              <div class="social-network">
+                  <h3>Biz ijtimoiy tarmoqlarda :</h3>
+                  <i data-feather="facebook" class="nav__item-icon"></i>
+                  <i data-feather="telegram" class="nav__item-icon"></i>
+                  <i data-feather="instagram" class="nav__item-icon"></i>
+                  <i data-feather="youtube" class="nav__item-icon"></i>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <h3>2015-2022 Internet-do’kon asaxiy.uz: Maishiy texnikalar va boshqalar.Mahsulotni yetkazib berish barcha viloyatlarda amalga oshiriladi. Barcha huquqlar himoyalangan.</h3>
+          </div>
+      </div>
+  </footer>
+
+
+
+    <script src="/js/books.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./js/sideBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
