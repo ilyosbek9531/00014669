@@ -1,0 +1,34 @@
+extends navbar_footer.pug
+
+block content
+    .add_wrapper
+        .center
+            h1 Add New Note
+            form(action=id ? `/add_notes?id=${id}`: '/add_notes' method="POST" enctype="multipart/form-data")
+                .inputbox
+                    input(type='text' name="title" value=title)
+                    span Title
+                    if(title == '')
+                        .required required
+                .inputbox
+                    input(type='date' name="date" value=date)
+                    span Date
+                    if(date == '')
+                        .required required
+                .inputbox
+                    textarea(type='text' name="description" data-value=description).description
+                    span Add Text
+                    if(description == '')
+                        .required required
+                .inputbox
+                    input(type='file' name="image")
+                    .no_required optional
+                .inputbox
+                    input(type='submit' value='submit')
+        if(addedNote)
+            .wrap_modal 
+                .modal 
+                    h2 #{id ? 'successfully edited' : 'successfully added'} 
+                    .buttons
+                        button.goToNotes go to Notes
+                        button.createNew create new

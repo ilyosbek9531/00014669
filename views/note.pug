@@ -1,0 +1,11 @@
+extends navbar_footer.pug
+
+block content
+    .wrapper-all
+        .container
+            .each-note  
+                h3.title #{note.title} 
+                p.date #{note.date}
+                p.note-texts #{note.description}
+                .image 
+                    img(src=note.image ? `/public/uploads/${note.image}` : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png", alt="img")

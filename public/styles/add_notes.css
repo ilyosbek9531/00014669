@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+.add_wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+  font-family: "Sansita Swashed", cursive;
+}
+.center {
+  position: relative;
+  padding: 50px 50px;
+  background: #fff;
+  border-radius: 10px;
+  width: 40rem;
+}
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid dodgerblue;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.center .inputbox {
+  position: relative;
+  width: 35rem;
+  height: 50px;
+  margin-bottom: 3rem;
+}
+
+.center .inputbox input,
+textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+.center .inputbox span {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 1.4rem;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span,
+.center .inputbox textarea:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1.4em;
+}
+.center .inputbox [type="submit"] {
+  width: 100%;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+  cursor: pointer;
+}
+.center .inputbox:hover [type="submit"] {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+.required {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  color: red;
+}
+.no_required {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: green;
+  transform: translate(-20%, -50%);
+}
+
+.wrap_modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modal .buttons button {
+  border: none;
+  outline: none;
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}

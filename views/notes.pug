@@ -1,0 +1,21 @@
+extends navbar_footer.pug
+
+block content
+    .wrapper-all
+        .container 
+            .notes 
+                if(notes.length > 0)
+                    each note in notes
+                        .note(data-value=note.id) 
+                            .content 
+                                h2.title #{note.title} 
+                                p.date #{note.date}
+                                p.note-texts #{note.description}
+                            .buttons 
+                                a(href=`/${note.id}/delete`)  
+                                    img(src="https://www.iconpacks.net/icons/1/free-trash-icon-347-thumb.png", alt="trashbin")
+                                a(href=`/add_notes?id=${note.id}`)  
+                                    img(src="https://cdn-icons-png.flaticon.com/512/5278/5278663.png", alt="update")
+                if(notes.length == 0)
+                    .no_data There is not Notes
+

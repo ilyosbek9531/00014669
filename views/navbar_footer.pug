@@ -1,0 +1,22 @@
+html(lang="en")
+    head
+        title Note Taking
+        link(rel="stylesheet", href="/public/styles/style.css")
+        link(rel="stylesheet", href="/public/styles/add_notes.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    body
+        .navbar-wrapper 
+            .navbar 
+                a(href="/").logo 
+                    h2 note
+                        span Taking
+                    .pugs 
+                        a.pug(href="/") Home 
+                        a.pug(href="/notes") Notes
+                        a.pug(href="/add_notes") Add notes   
+        block content
+        .footer-wrapper 
+            footer 
+                p This note taking website wad created by 0000xxx
+        script(src="/public/javascript/add_notes.js") 
+        script(src="/public/javascript/notes.js") 
