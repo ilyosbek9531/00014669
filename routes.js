@@ -140,4 +140,12 @@ router.get("/:id/delete", (req, res) => {
   });
 });
 
+router.get("/api/v1/notes", (req, res) => {
+  fs.readFile("./data/notes.json", (err, notes) => {
+    if (err) throw err;
+    const allNotes = JSON.parse(notes);
+    res.json(allNotes);
+  });
+});
+
 module.exports = router;
