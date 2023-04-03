@@ -23,7 +23,7 @@ npm i crypto
 3. Run the application
 
 ```bash
-npm run start || npm start || node app
+npm run start
 ```
 
 ### web application dependencies list
